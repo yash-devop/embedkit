@@ -3,68 +3,35 @@
 
 /* Light mode */
 :root {
-  --background: #ffffff;
-  --foreground: #000000;
+  --background: #f5f5f5;
+  --foreground: #212121;
 
-  --primary: #0098ab;
-  --primary-foreground: #ffffff;
+  --primary: #443aff;
+  --primary-foreground: #d9d9d9;
 
-  --secondary: #f3f3f3;
-  --secondary-foreground: #222222;
+  --secondary: #e7e5ff;
+  --secondary-foreground: #443aff;
 
-  --card: #f7f7f7;
-  --card-foreground: #222222;
+  --card: #f5f5f5;
+  --card-foreground: #212121;
 
   --tertiary: #e5e5e5;
 
-  --muted: #f1f1f1;
-  --muted-foreground: #0098ab;
+  --muted: #f5f5f5;
+  --muted-foreground: #212121;
 
   --accent: #0098ab;
   --accent-foreground: #ffffff;
 
-  --destructive: #fff5f5;
-  --destructive-foreground: #690000;
+  --destructive: #f70000;
+  --destructive-foreground: #ffffff;
 
-  --border: #e5e5e5;
-  --input: #f3f3f3;
-  --ring: #0098ab;
+  --border: #d9d9d9;
+  --input: #d9d9d9;
+  --ring: #212121;
 
-  --error: #fff5f5;
-  --error-foreground: #690000;
-}
-
-/* Dark mode overrides */
-.dark {
-  --background: #000000;
-  --foreground: #ffffff;
-
-  --primary: #0098ab;
-  --primary-foreground: #010101;
-
-  --secondary: #131313;
-  --secondary-foreground: #5d5d5d;
-
-  --card: #131313;
-  --card-foreground: #ffffff;
-
-  --tertiary: #5d5d5d;
-
-  --muted: #1e4045;
-  --muted-foreground: #0098ab;
-
-  --accent: #0098ab;
-  --accent-foreground: #ffffff;
-
-  --destructive: #3c0202;
-  --destructive-foreground: #690000;
-
-  --border: #303030;
-  --input: #131313;
-  --ring: #0098ab;
-
-  --error: #3c0202;
-  --error-foreground: #690000;
+  --error: #f70000;
+  --error-foreground: #ffffff;
 }
 
 @theme {
