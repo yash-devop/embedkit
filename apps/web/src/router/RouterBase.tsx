@@ -1,6 +1,7 @@
 import React from "react";
 import { createBrowserRouter } from "react-router";
 import { PageLayout } from "../components/Layouts/PageLayout";
+import Login from "../components/login/Login";
 
 export const Router = createBrowserRouter([
   {
@@ -11,7 +12,7 @@ export const Router = createBrowserRouter([
         path: "/",
         element: (
           <>
-            <h1 className="bg-red-400">YO</h1>
+            <Login />
           </>
         ),
       },
