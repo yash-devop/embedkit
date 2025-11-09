@@ -1,8 +1,10 @@
 {
   "extends": "@repo/typescript-config/base.json",
   "compilerOptions": {
+    "baseUrl": ".",
     "paths": {
-      "@/*": ["./src"]
+      "@/*": ["./src/*"],
+      "@prisma/*": ["./prisma/*"]
     }
   },
   "allowImportingTsExtensions": true

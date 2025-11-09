@@ -1,15 +1,20 @@
 import cors from "cors";
 import express from "express";
-
 import { corsConfig } from "./config/config.js";
-import { featureRouter } from "./modules/featureName/name.route.js";
+import { AuthRouter } from "./modules/auth/auth.route.js";
+
+import { config } from "dotenv";
+
+config({
+  path: "../../.env",
+});
 
 export const app = express();
 
 app.use(express.json());
 app.use(cors(corsConfig));
-app.use("/api/v1", featureRouter);
+app.use("/api/v1", AuthRouter);
 
-app.listen(8001, () => {
-  console.log("Server started successfully.");
+app.listen(process.env.PORT, () => {
+  console.log(`Server started successfully on PORT ${process.env.PORT}`);
 });
