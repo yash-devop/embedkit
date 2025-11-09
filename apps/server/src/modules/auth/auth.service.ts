@@ -1,8 +1,8 @@
-const service = {
-  testFunction: () => {
+const AuthService = {
+  login: () => {
     // your api related calls.
   },
   // ...more like this
 };
 
-export { service };
+export { AuthService };
