@@ -1,2 +1,3 @@
-# LiveSnip
+# embedkit
+
 #snip live
