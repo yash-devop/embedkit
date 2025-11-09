@@ -1,0 +1,17 @@
+version: "3.8"
+services:
+  embedkit-postgres:
+    image: postgres
+    ports:
+      - 5431:5432
+    container_name: embedkit-postgres-db
+    environment:
+      - POSTGRES_USER=${POSTGRES_USER}
+      - POSTGRES_PASSWORD=${POSTGRES_PASSWORD}
+      - POSTGRES_DB=${POSTGRES_DB}
+    volumes:
+      - "embedkit-db-data:/var/lib/postgresql/data"
+
+volumes:
+  embedkit-db-data:
+    external: false
