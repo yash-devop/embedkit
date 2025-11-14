@@ -3,13 +3,9 @@ import express from "express";
 import { corsConfig } from "./config/config.js";
 import { AuthRouter } from "./modules/auth/auth.route.js";
 
-import { config } from "dotenv";
+import "@repo/common/env";
 import { toNodeHandler } from "better-auth/node";
 import { auth } from "./lib/better-auth/auth.js";
-
-config({
-  path: "../../.env",
-});
 
 export const app = express();
 

@@ -1,10 +1,8 @@
+import "@repo/common/env";
 import { betterAuth } from "better-auth";
 import { prismaAdapter } from "better-auth/adapters/prisma";
 import { PrismaClient } from "../../../prisma/src/generatedClient/prisma/client.js";
-import { config } from "dotenv";
-config({
-  path: "../../.env",
-});
+import { FRONTEND_URL } from "@repo/common/config";
 
 const prisma = new PrismaClient();
 export const auth = betterAuth({
@@ -17,5 +15,5 @@ export const auth = betterAuth({
       clientSecret: process.env.GITHUB_CLIENT_SECRET as string,
     },
   },
-  trustedOrigins: ["http://localhost:5173"],
+  trustedOrigins: [FRONTEND_URL],
 });

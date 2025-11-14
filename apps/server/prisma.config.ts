@@ -1,8 +1,6 @@
 import { config } from "dotenv";
 import { defineConfig, env } from "prisma/config";
-config({
-  path: "../../.env",
-});
+import "@repo/common/env";
 export default defineConfig({
   schema: "prisma/schemas/schema.prisma",
   migrations: {
