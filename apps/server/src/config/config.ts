@@ -1,7 +1,8 @@
 import { CorsOptions } from "cors";
 
-export const FRONTEND_URL = "http://localhost:5174";
+export const FRONTEND_URL = "http://localhost:5173";
 
 export const corsConfig: CorsOptions = {
-  origin: "*",
+  origin: "http://localhost:5173",
+  credentials: true,
 };
