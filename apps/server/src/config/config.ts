@@ -1,8 +1,7 @@
 import { CorsOptions } from "cors";
-
-export const FRONTEND_URL = "http://localhost:5173";
+import { FRONTEND_URL } from "@repo/common/config";
 
 export const corsConfig: CorsOptions = {
-  origin: "http://localhost:5173",
+  origin: FRONTEND_URL,
   credentials: true,
 };
