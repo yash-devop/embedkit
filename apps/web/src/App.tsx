@@ -1,7 +1,6 @@
 import React from "react";
-import { PageLayout } from "./components/Layouts/PageLayout";
-import { Router } from "./router/RouterBase";
 import { RouterProvider } from "react-router";
+import { Router } from "./router/RouterBase";
 function App() {
   return (
     <>
