@@ -1,11 +1,18 @@
+import {
+  Avatar,
+  AvatarFallback,
+  AvatarImage,
+} from "@/components/ui/avatar.tsx";
+import {
+  Popover,
+  PopoverContent,
+  PopoverTrigger,
+} from "@/components/ui/popover.tsx";
+import { useAuth } from "@/features/auth/hooks/hooks.ts";
+import { getInitials } from "@/lib/utils.ts";
 import { ChevronDown, LogOut } from "lucide-react";
-import React from "react";
 import { useNavigate } from "react-router";
-import { useAuth } from "../features/auth/hooks/hooks";
-import { Avatar, AvatarFallback, AvatarImage } from "./ui/avatar";
-import { Button } from "./ui/Button";
-import { Popover, PopoverContent, PopoverTrigger } from "./ui/popover";
-import { getInitials } from "../lib/utils";
+import { Button } from "./ui/Button.tsx";
 export const Navbar = () => {
   const { signOut, userSession } = useAuth();
 

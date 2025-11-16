@@ -1,7 +1,7 @@
-import React from "react";
+import { useAuth } from "@/features/auth/hooks/hooks.ts";
+import { WorkspaceLayout } from "@/features/dashboard/components/WorkspaceLayout.tsx";
 import { Navigate } from "react-router";
-import { useAuth } from "../features/auth/hooks/hooks";
-import { WorkspaceLayout } from "./Layouts/WorkspaceLayout";
+
 export const ProtectedRoute = () => {
   const { userSession } = useAuth();
 

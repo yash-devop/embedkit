@@ -1,6 +1,5 @@
-import React from "react";
-import { useAuth } from "./hooks/hooks";
-import { Button } from "../../components/ui/Button";
+import { Button } from "@/components/ui/Button.tsx";
+import { useAuth } from "./hooks/hooks.ts";
 export const LoginPage = () => {
   const { signIn } = useAuth();
   return (

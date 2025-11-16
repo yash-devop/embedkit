@@ -1,6 +1,6 @@
 import React from "react";
 import { Outlet } from "react-router";
-import { Navbar } from "../Navbar";
+import { Navbar } from "../Navbar.tsx";
 
 export const PageLayout = () => {
   return (

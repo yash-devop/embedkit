@@ -1,6 +1,5 @@
-import React from "react";
 import { Outlet } from "react-router";
-import { WorkspaceNavbar } from "../WorkspaceNavbar";
+import { WorkspaceNavbar } from "./WorkspaceNavbar.tsx";
 
 export const WorkspaceLayout = () => {
   return (

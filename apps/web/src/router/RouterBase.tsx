@@ -1,11 +1,10 @@
-import React from "react";
+import { PageLayout } from "@/components/Layouts/PageLayout.tsx";
+import { ProtectedRoute } from "@/components/ProtectedRoute.tsx";
+import { LoginPage } from "@/features/auth/Login.tsx";
+import { IntegrationPage } from "@/pages/dashboard/integrations/IntegrationPage.tsx";
+import { OverviewPage } from "@/pages/dashboard/overview/OverviewPage.tsx";
+import { LandingPage } from "@/pages/LandingPage.tsx";
 import { createBrowserRouter } from "react-router";
-import { PageLayout } from "../components/Layouts/PageLayout";
-import { LandingPage } from "../pages/LandingPage";
-import { LoginPage } from "../features/auth/Login";
-import { ProtectedRoute } from "../components/ProtectedRoute";
-import { OverviewPage } from "../pages/OverviewPage";
-
 export const Router = createBrowserRouter([
   {
     path: "/",
@@ -27,6 +26,10 @@ export const Router = createBrowserRouter([
           {
             path: "overview",
             element: <OverviewPage />,
+          },
+          {
+            path: "integrations",
+            element: <IntegrationPage />,
           },
         ],
       },
