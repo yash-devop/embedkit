@@ -1,5 +1,5 @@
-import { authClient } from "../../../config/authClient";
 import { FRONTEND_URL } from "@repo/common/config";
+import { authClient } from "../../../config/authClient";
 
 export const useAuth = () => {
   const signIn = async (provider: "github" | "google") => {
@@ -9,8 +9,11 @@ export const useAuth = () => {
     });
     return data;
   };
+  const userSession = authClient.useSession();
 
   return {
     signIn,
+    signOut: authClient.signOut,
+    userSession,
   };
 };
