@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/Button.tsx";
 import { Plus } from "lucide-react";
+import { Link } from "react-router";
 
 export const EmptyState = () => {
   return (
@@ -7,8 +8,7 @@ export const EmptyState = () => {
       <div className="w-[500px] h-[350px] rounded-lg flex items-center justify-center tracking-[-0.15px] bg-white">
         <div className="flex flex-col items-center gap-y-3 mb-10">
           <svg
-            width="62"
-            height="62"
+            className="size-[62px]"
             viewBox="0 0 20 20"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
@@ -30,7 +30,9 @@ export const EmptyState = () => {
 
           <Button className="gap-0.5 mr-0.5">
             <Plus />
-            <p>Add integration</p>
+            <Link to={"/dashboard/integrations"}>
+              <p>Add integration</p>
+            </Link>
           </Button>
         </div>
       </div>
