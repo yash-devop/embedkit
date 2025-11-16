@@ -4,6 +4,7 @@ import { PageLayout } from "../components/Layouts/PageLayout";
 import { LandingPage } from "../pages/LandingPage";
 import { LoginPage } from "../features/auth/Login";
 import { ProtectedRoute } from "../components/ProtectedRoute";
+import { DashboardPage } from "../pages/Dashboard";
 
 export const Router = createBrowserRouter([
   {
@@ -24,7 +25,7 @@ export const Router = createBrowserRouter([
         children: [
           {
             path: "dashboard",
-            element: <p>DASHBOARD PROTECTED</p>,
+            element: <DashboardPage />,
           },
         ],
       },
