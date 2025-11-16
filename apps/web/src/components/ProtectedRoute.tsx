@@ -1,5 +1,5 @@
 import { useAuth } from "@/features/auth/hooks/hooks.ts";
-import { WorkspaceLayout } from "@/features/dashboard/components/WorkspaceLayout.tsx";
+import { WorkspaceLayout } from "@/features/dashboard/shared/WorkspaceLayout.tsx";
 import { Navigate } from "react-router";
 
 export const ProtectedRoute = () => {
