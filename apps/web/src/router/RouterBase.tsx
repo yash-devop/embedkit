@@ -4,7 +4,7 @@ import { PageLayout } from "../components/Layouts/PageLayout";
 import { LandingPage } from "../pages/LandingPage";
 import { LoginPage } from "../features/auth/Login";
 import { ProtectedRoute } from "../components/ProtectedRoute";
-import { DashboardPage } from "../pages/Dashboard";
+import { OverviewPage } from "../pages/OverviewPage";
 
 export const Router = createBrowserRouter([
   {
@@ -21,11 +21,12 @@ export const Router = createBrowserRouter([
         element: <LoginPage />,
       },
       {
+        path: "dashboard",
         element: <ProtectedRoute />,
         children: [
           {
-            path: "dashboard",
-            element: <DashboardPage />,
+            path: "overview",
+            element: <OverviewPage />,
           },
         ],
       },

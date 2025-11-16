@@ -5,7 +5,7 @@ export const useAuth = () => {
   const signIn = async (provider: "github" | "google") => {
     const data = await authClient.signIn.social({
       provider,
-      callbackURL: `${FRONTEND_URL}/dashboard`,
+      callbackURL: `${FRONTEND_URL}/dashboard/overview`,
     });
     return data;
   };
