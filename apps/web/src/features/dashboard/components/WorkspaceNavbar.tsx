@@ -9,7 +9,7 @@ const NAVBAR_ROUTES = [
   },
   {
     id: 2,
-    href: "/dashboard/integration",
+    href: "/dashboard/integrations",
     name: "Integration",
   },
 ];
