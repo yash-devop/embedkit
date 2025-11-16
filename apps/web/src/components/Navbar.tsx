@@ -16,7 +16,7 @@ export const Navbar = () => {
 
   return (
     <header className="w-full h-[53px] border-b border-border">
-      <nav className="flex justify-between items-center h-full w-full max-w-[1500px] mx-auto">
+      <nav className="flex justify-between items-center h-full w-full max-w-[1500px] mx-auto px-4">
         <div>
           <h1 className="font-semibold text-xl tracking-[-1.7px] select-none">
             EmbedKit
