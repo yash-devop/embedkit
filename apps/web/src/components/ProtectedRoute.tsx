@@ -1,6 +1,7 @@
 import React from "react";
-import { Navigate, Outlet } from "react-router";
+import { Navigate } from "react-router";
 import { useAuth } from "../features/auth/hooks/hooks";
+import { WorkspaceLayout } from "./Layouts/WorkspaceLayout";
 export const ProtectedRoute = () => {
   const { userSession } = useAuth();
 
@@ -12,5 +13,12 @@ export const ProtectedRoute = () => {
     );
   }
 
-  return userSession.data?.session ? <Outlet /> : <Navigate to={"/login"} />;
+  if (!userSession.data?.session) {
+    return <Navigate to={"/login"} />;
+  }
+  return (
+    <>
+      <WorkspaceLayout />
+    </>
+  );
 };
