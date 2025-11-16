@@ -1,6 +1,6 @@
 import React from "react";
 import { Outlet } from "react-router";
-import { Navbar } from "../ui/Navbar";
+import { Navbar } from "../Navbar";
 
 export const PageLayout = () => {
   return (
