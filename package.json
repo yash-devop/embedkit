@@ -10,7 +10,8 @@
     "compose:up": "docker compose --env-file .env up -d",
     "compose:exec": "docker exec -it embedkit-postgres-db bash",
     "compose:down": "docker compose down",
-    "compose:erase": "docker compose down -v"
+    "compose:erase": "docker compose down -v",
+    "prisma:format": "npx prisma format --schema=./apps/server/prisma/schemas/schema.prisma"
   },
   "devDependencies": {
     "prettier": "^3.6.2",
