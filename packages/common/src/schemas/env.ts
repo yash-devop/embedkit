@@ -1,8 +1,8 @@
-import z from "zod";
 import { config } from "dotenv";
-import path from "path";
+import { findUpSync } from "find-up";
+import z from "zod";
 config({
-  path: path.resolve(__dirname, "../../../.env"),
+  path: findUpSync(".env"),
 });
 
 const envSchema = z.object({
@@ -12,6 +12,10 @@ const envSchema = z.object({
   BETTER_AUTH_URL: z.string(),
   GITHUB_CLIENT_ID: z.string(),
   GITHUB_CLIENT_SECRET: z.string(),
+
+  APP_ID: z.string(),
+  WEBHOOK_SECRET: z.string(),
+  PRIVATE_KEY_PATH: z.string(),
 });
 
 export const env = envSchema.parse(process.env);
