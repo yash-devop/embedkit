@@ -37,8 +37,7 @@ export const IntegrationItem = () => {
             onClick={() => {
               mutate(undefined, {
                 onSuccess: (data) => {
-                  console.log("data", data.data.url);
-                  window.location.href = data.data.url;
+                  window.location.href = data.url;
                 },
               });
             }}

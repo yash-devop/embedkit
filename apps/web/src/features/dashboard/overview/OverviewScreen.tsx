@@ -1,11 +1,11 @@
 import { useGetIntegration } from "../integrations/hooks/useGetIntegration.ts";
 import { EmptyState } from "../shared/EmptyState.tsx";
 export const OverviewScreen = () => {
-  const { data } = useGetIntegration();
+  const { data: integrationData } = useGetIntegration();
 
   return (
     <div className="h-full w-full  flex flex-col items-center justify-center">
-      {data && data.data.userId ? (
+      {integrationData && integrationData.userId ? (
         <div>
           <span>Im editor</span>
         </div>
