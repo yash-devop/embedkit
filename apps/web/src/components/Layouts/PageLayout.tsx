@@ -4,9 +4,11 @@ import { Navbar } from "../Navbar.tsx";
 
 export const PageLayout = () => {
   return (
-    <div className="min-h-screen h-full">
+    <div className="flex flex-col h-screen">
       <Navbar />
-      <Outlet />
+      <div className="flex-1 overflow-hidden">
+        <Outlet />
+      </div>
     </div>
   );
 };
