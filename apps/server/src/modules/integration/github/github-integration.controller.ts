@@ -1,5 +1,3 @@
-import { auth } from "@/lib/better-auth/auth.js";
-import { fromNodeHeaders } from "better-auth/node";
 import { Request, Response } from "express";
 import { GithubIntegrationService } from "./github-integration.service.js";
 
@@ -14,12 +12,8 @@ const GithubIntegrationController = {
     });
   },
   getIntegration: async (req: Request, res: Response) => {
-    const session = await auth.api.getSession({
-      headers: fromNodeHeaders(req.headers),
-    });
-
     const response = await GithubIntegrationService.getIntegration(
-      session?.user.id || ""
+      req.session.session.userId
     );
 
     if (!response.data) {

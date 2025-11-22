@@ -7,6 +7,7 @@ import { toNodeHandler } from "better-auth/node";
 import { auth } from "./lib/better-auth/auth.js";
 import { setupGitHubWebhooks } from "./modules/integration/github/webhooks/webhook-register.js";
 import { GithubIntegrationRouter } from "./modules/integration/github/github-integration.route.js";
+import { authMiddleware } from "./middlewares/auth.middleware.js";
 
 export const app = express();
 
@@ -16,7 +17,7 @@ app.all("/api/auth/*any", toNodeHandler(auth)); // express v5 has this catch any
 setupGitHubWebhooks(app);
 app.use(express.json());
 
-app.use("/api/integration", GithubIntegrationRouter);
+app.use("/api/integration", authMiddleware, GithubIntegrationRouter);
 
 app.listen(process.env.PORT, async () => {
   console.log(`Server started successfully on PORT ${process.env.PORT}`);
