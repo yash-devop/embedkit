@@ -6,6 +6,8 @@ function App() {
     defaultOptions: {
       queries: {
         refetchOnWindowFocus: false,
+        refetchOnMount: false,
+        staleTime: 5 * 60 * 1000,
       },
     },
   });
