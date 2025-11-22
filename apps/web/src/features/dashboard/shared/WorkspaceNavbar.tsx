@@ -1,3 +1,4 @@
+import { Button } from "@/components/ui/Button.tsx";
 import { Link, useLocation } from "react-router";
 
 const NAVBAR_ROUTES = [
@@ -18,25 +19,28 @@ export const WorkspaceNavbar = () => {
 
   return (
     <header className="h-10 border-b border-border w-full ">
-      <nav className="flex items-center h-full gap-x-5 px-3.5 text-sm max-w-[1500px] mx-auto">
-        {NAVBAR_ROUTES.map((routeUnit) => {
-          const isActive = location.pathname === routeUnit.href;
+      <nav className="flex items-center justify-between h-full text-sm max-w-[1500px] mx-auto">
+        <div className="gap-x-5 px-3.5 flex items-center">
+          {NAVBAR_ROUTES.map((routeUnit) => {
+            const isActive = location.pathname === routeUnit.href;
 
-          return (
-            <>
-              <Link
-                key={routeUnit.id}
-                to={routeUnit.href}
-                className={`relative ${isActive ? "text-primary" : "text-heading/60"}`}
-              >
-                <span>{routeUnit.name}</span>
-                {isActive ? (
-                  <div className="h-[1.5px] w-full bg-primary absolute -bottom-2.5 " />
-                ) : null}
-              </Link>
-            </>
-          );
-        })}
+            return (
+              <>
+                <Link
+                  key={routeUnit.id}
+                  to={routeUnit.href}
+                  className={`relative ${isActive ? "text-primary" : "text-heading/60"}`}
+                >
+                  <span>{routeUnit.name}</span>
+                  {isActive ? (
+                    <div className="h-[1.5px] w-full bg-primary absolute -bottom-2.5 " />
+                  ) : null}
+                </Link>
+              </>
+            );
+          })}
+        </div>
+        <Button>+ Create snippet</Button>
       </nav>
     </header>
   );
