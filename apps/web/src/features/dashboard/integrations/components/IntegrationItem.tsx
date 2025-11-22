@@ -1,6 +1,8 @@
 import { Button } from "@/components/ui/Button.tsx";
+import { useCreateInstallationGithub } from "../hooks/useCreateInstallationGithub.ts";
 
 export const IntegrationItem = () => {
+  const { mutate } = useCreateInstallationGithub();
   return (
     <div className="border border-border rounded-md py-3 px-4 w-80">
       <div className="flex items-start gap-x-2">
@@ -30,7 +32,25 @@ export const IntegrationItem = () => {
           {/* <Button variant={"outline"} className="h-7 px-2.5">
             Enable
           </Button> */}
-          <Button className="h-7 px-2.5">Enable</Button>
+          <Button
+            className="h-7 px-2.5"
+            onClick={() => {
+              mutate(undefined, {
+                onSuccess: (data) => {
+                  console.log("data", data.data.url);
+                  window.location.href = data.data.url;
+                },
+              });
+            }}
+          >
+            Enable
+            {/* <Link
+              target="_blank"
+              to={"https://github.com/apps/embedkit/installations/new"}
+            >
+              Enable
+            </Link> */}
+          </Button>
         </div>
       </div>
     </div>
