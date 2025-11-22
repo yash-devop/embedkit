@@ -5,7 +5,9 @@
     "./types": "./src/types/types.ts",
     "./schemas": "./src/schemas/RoomSchema.ts",
     "./env": "./src/schemas/env.ts",
-    "./config": "./src/configs/configs.ts"
+    "./config": "./src/configs/configs.ts",
+    "./queryCacheKeys": "./src/cacheKeys/keys.ts",
+    "./apiUrls": "./src/apiUrls/urls.ts"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
